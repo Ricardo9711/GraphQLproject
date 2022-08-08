@@ -1,0 +1,26 @@
+type Almacen {
+	id: ID!
+	nombre : String
+    pais : String
+    departamento : String
+    ciudad : String
+    direccion : String
+    estado : String
+    indTienda : String
+    usuarioCrea : String
+}
+type Query {
+	almacenes(cantidad: Int): [Almacen]
+	almacen(id: ID): Almacen
+}
+type Mutation {
+	registrarAlmacen(
+		nombre : String
+        pais : String
+        departamento : String
+        ciudad : String
+        direccion : String
+        estado : String
+        indTienda : String
+	): Almacen
+}
